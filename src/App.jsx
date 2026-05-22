@@ -1,3 +1,17 @@
+<div style="text-align: center; margin: 30px auto; padding: 20px; max-width: 400px; font-family: sans-serif;">
+  <h2 style="color: #333; margin-bottom: 15px;">Cateno Athletics</h2>
+  
+  <img src="./instagram-qr.png" alt="Instagram QR Code" style="width: 100%; max-width: 250px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  
+  <div style="margin-top: 15px;">
+    <a href="https://www.instagram.com/cateno_athletics?igsh=MXEzaXZtN2l1d29vNw==" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.15);">
+       @cateno_athletics auf Instagram
+    </a>
+  </div>
+</div>
 import { useState } from "react";
 
 const MUSCLES = [
