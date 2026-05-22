@@ -183,6 +183,18 @@ const CATS = [
   const totalCount = Object.values(plan).flat().length;
 
   return (
+    <div style={{ textAlign: 'center', margin: '30px auto', padding: '20px', maxWidth: '400px' }}>
+  <h2 style={{ color: '#333', marginBottom: '15px' }}>Cateno Athletics</h2>
+  <img src="/instagram-qr.png" alt="Instagram QR Code" style={{ width: '100%', maxWidth: '250px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }} />
+  <div style={{ marginTop: '15px' }}>
+    <a href="https://www.instagram.com/cateno_athletics?igsh=MXEzaXZtN2l1d29vNw=="
+       target="_blank"
+       rel="noopener noreferrer"
+       style={{ display: 'inline-block', background: 'linear-gradient(45deg, #f09433, #dc2743, #bc1888)', color: '#fff', padding: '12px 24px', textDecoration: 'none', borderRadius: '25px', fontWeight: 'bold' }}>
+       @cateno_athletics auf Instagram
+    </a>
+  </div>
+</div>
     <div style={{ fontFamily: "'Sora', sans-serif", minHeight: "100vh", background: "#f5f3ef", color: "#1c1c1c", maxWidth: 430, margin: "0 auto" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap');
