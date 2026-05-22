@@ -1,17 +1,3 @@
-<div style="text-align: center; margin: 30px auto; padding: 20px; max-width: 400px; font-family: sans-serif;">
-  <h2 style="color: #333; margin-bottom: 15px;">Cateno Athletics</h2>
-  
-  <img src="./instagram-qr.png" alt="Instagram QR Code" style="width: 100%; max-width: 250px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  
-  <div style="margin-top: 15px;">
-    <a href="https://www.instagram.com/cateno_athletics?igsh=MXEzaXZtN2l1d29vNw==" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.15);">
-       @cateno_athletics auf Instagram
-    </a>
-  </div>
-</div>
 import { useState } from "react";
 
 const MUSCLES = [
@@ -183,18 +169,6 @@ const CATS = [
   const totalCount = Object.values(plan).flat().length;
 
   return (
-    <div style={{ textAlign: 'center', margin: '30px auto', padding: '20px', maxWidth: '400px' }}>
-  <h2 style={{ color: '#333', marginBottom: '15px' }}>Cateno Athletics</h2>
-  <img src="/instagram-qr.png" alt="Instagram QR Code" style={{ width: '100%', maxWidth: '250px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }} />
-  <div style={{ marginTop: '15px' }}>
-    <a href="https://www.instagram.com/cateno_athletics?igsh=MXEzaXZtN2l1d29vNw=="
-       target="_blank"
-       rel="noopener noreferrer"
-       style={{ display: 'inline-block', background: 'linear-gradient(45deg, #f09433, #dc2743, #bc1888)', color: '#fff', padding: '12px 24px', textDecoration: 'none', borderRadius: '25px', fontWeight: 'bold' }}>
-       @cateno_athletics auf Instagram
-    </a>
-  </div>
-</div>
     <div style={{ fontFamily: "'Sora', sans-serif", minHeight: "100vh", background: "#f5f3ef", color: "#1c1c1c", maxWidth: 430, margin: "0 auto" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap');
@@ -214,7 +188,22 @@ const CATS = [
         .day-tab{transition:opacity .1s}
       `}</style>
 
-      <div style={{ background: "#fff", padding: "44px 22px 0", borderBottom: "1px solid #ece9e3" }}>
+      {/* INSTAGRAM BANNER */}
+      <div style={{ textAlign: 'center', padding: '24px 20px 16px', background: '#fff', borderBottom: '1px solid #f0ede8' }}>
+        <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 600, color: '#1c1c1c', marginBottom: 12 }}>Cateno Athletics</h2>
+        <img src="/instagram-qr.png" alt="Instagram QR Code" style={{ width: '140px', height: '140px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', marginBottom: 12 }} />
+        <div>
+          <a href="https://www.instagram.com/cateno_athletics?igsh=MXEzaXZtN2l1d29vNw=="
+             target="_blank"
+             rel="noopener noreferrer"
+             style={{ display: 'inline-block', background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)', color: '#fff', padding: '10px 22px', textDecoration: 'none', borderRadius: '25px', fontWeight: 'bold', fontSize: 13 }}>
+            @cateno_athletics auf Instagram
+          </a>
+        </div>
+      </div>
+
+      {/* TOP BAR */}
+      <div style={{ background: "#fff", padding: "20px 22px 0", borderBottom: "1px solid #ece9e3" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 18 }}>
           <div>
             <p style={{ fontSize: 11, letterSpacing: 3, textTransform: "uppercase", color: "#b0a898", fontWeight: 600, marginBottom: 4 }}>Deine</p>
@@ -238,7 +227,7 @@ const CATS = [
         </div>
       </div>
 
-      <div style={{ padding: "20px 22px 110px", overflowY: "auto", maxHeight: "calc(100vh - 170px)" }}>
+      <div style={{ padding: "20px 22px 110px", overflowY: "auto", maxHeight: "calc(100vh - 280px)" }}>
         {tab === "exercises" && (
           <div className="fadein">
             <div style={{ display: "flex", gap: 8, marginBottom: 22 }}>
@@ -279,10 +268,7 @@ const CATS = [
                         background: "#fff", borderRadius: 16, border: "none", textAlign: "left",
                         boxShadow: "0 2px 8px rgba(0,0,0,.05)", animationDelay: `${i * 0.04}s`,
                       }}>
-                      <div style={{
-                        width: 46, height: 46, borderRadius: 13, display: "flex", alignItems: "center",
-                        justifyContent: "center", fontSize: 22, background: m.color + "18", flexShrink: 0,
-                      }}>{m.icon}</div>
+                      <div style={{ width: 46, height: 46, borderRadius: 13, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, background: m.color + "18", flexShrink: 0 }}>{m.icon}</div>
                       <div style={{ flex: 1 }}>
                         <p style={{ fontWeight: 700, fontSize: 15 }}>{m.name}</p>
                         <p style={{ fontSize: 11, color: "#b0a898", marginTop: 2, fontStyle: "italic" }}>{m.latin}</p>
@@ -294,50 +280,29 @@ const CATS = [
               </div>
             ) : (
               <div className="fadein">
-                <button onClick={() => setSelectedMuscle(null)} style={{
-                  background: "none", border: "none", display: "flex", alignItems: "center",
-                  gap: 6, fontSize: 13, color: "#888", marginBottom: 16, padding: 0, fontWeight: 600,
-                }}>‹ Zurück</button>
+                <button onClick={() => setSelectedMuscle(null)} style={{ background: "none", border: "none", display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#888", marginBottom: 16, padding: 0, fontWeight: 600 }}>‹ Zurück</button>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-                  <div style={{ width: 52, height: 52, borderRadius: 15, background: selectedMuscle.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26 }}>
-                    {selectedMuscle.icon}
-                  </div>
+                  <div style={{ width: 52, height: 52, borderRadius: 15, background: selectedMuscle.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26 }}>{selectedMuscle.icon}</div>
                   <div>
                     <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 24, fontWeight: 600 }}>{selectedMuscle.name}</h2>
                     <p style={{ fontSize: 11, color: "#b0a898", fontStyle: "italic" }}>{selectedMuscle.latin}</p>
                   </div>
                 </div>
-                <p style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#b0a898", fontWeight: 600, marginBottom: 12 }}>
-                  {CATS.find(c => c.id === selectedCat)?.label} — Übungen
-                </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {EXERCISES[selectedMuscle.id][selectedCat].map((ex, i) => {
                     const key = `${selectedMuscle.id}-${ex.name}`;
                     const added = plan[selectedDay].find(e => e.key === key);
                     return (
-                      <div key={i} className="ex-row fadein" style={{
-                        display: "flex", alignItems: "center", gap: 14,
-                        background: "#fff", borderRadius: 16, padding: "16px",
-                        boxShadow: "0 2px 10px rgba(0,0,0,.05)", animationDelay: `${i * .07}s`,
-                        opacity: added ? .5 : 1, transition: "opacity .2s",
-                      }}>
+                      <div key={i} className="ex-row fadein" style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", borderRadius: 16, padding: "16px", boxShadow: "0 2px 10px rgba(0,0,0,.05)", opacity: added ? .5 : 1 }}>
                         <div style={{ flex: 1 }}>
                           <p style={{ fontWeight: 700, fontSize: 15 }}>{ex.name}</p>
                           <p style={{ fontSize: 12, color: "#a0988e", marginTop: 3 }}>{ex.desc}</p>
-                          <div style={{ marginTop: 8, display: "inline-block", background: selectedMuscle.color + "18", color: selectedMuscle.color, borderRadius: 8, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>
-                            {ex.sets}
-                          </div>
+                          <div style={{ marginTop: 8, display: "inline-block", background: selectedMuscle.color + "18", color: selectedMuscle.color, borderRadius: 8, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>{ex.sets}</div>
                         </div>
                         <button className={`add-circle ${flash === key ? "popping" : ""}`}
                           onClick={() => addToPlan(ex, selectedMuscle)}
                           disabled={!!added}
-                          style={{
-                            width: 40, height: 40, borderRadius: 12, border: "none",
-                            background: added ? "#f0ede8" : selectedMuscle.color,
-                            color: added ? "#ccc" : "#fff", fontSize: 22, fontWeight: 300,
-                            display: "flex", alignItems: "center", justifyContent: "center",
-                            flexShrink: 0, opacity: added ? 1 : 0.85,
-                          }}>
+                          style={{ width: 40, height: 40, borderRadius: 12, border: "none", background: added ? "#f0ede8" : selectedMuscle.color, color: added ? "#ccc" : "#fff", fontSize: 22, fontWeight: 300, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                           {added ? "✓" : "+"}
                         </button>
                       </div>
@@ -361,9 +326,7 @@ const CATS = [
                   transition: "all .12s ease",
                 }}>
                   {d}
-                  {plan[d].length > 0 && (
-                    <div style={{ width: 5, height: 5, borderRadius: "50%", background: selectedDay === d ? "#ffffff80" : "#e85d3a", margin: "3px auto 0" }} />
-                  )}
+                  {plan[d].length > 0 && <div style={{ width: 5, height: 5, borderRadius: "50%", background: selectedDay === d ? "#ffffff80" : "#e85d3a", margin: "3px auto 0" }} />}
                 </button>
               ))}
             </div>
@@ -376,35 +339,21 @@ const CATS = [
             {plan[selectedDay].length === 0 ? (
               <div style={{ background: "#fff", borderRadius: 18, padding: "48px 24px", textAlign: "center", border: "1.5px dashed #e0dbd3" }}>
                 <div style={{ fontSize: 44, marginBottom: 14 }}>📋</div>
-                <p style={{ fontSize: 14, color: "#c0b8ae", lineHeight: 1.7 }}>
-                  Geh zu <strong style={{ color: "#1c1c1c" }}>Übungen</strong>,<br />
-                  wähle eine Muskelgruppe und<br />füge Übungen zum Tag hinzu.
-                </p>
+                <p style={{ fontSize: 14, color: "#c0b8ae", lineHeight: 1.7 }}>Geh zu <strong style={{ color: "#1c1c1c" }}>Übungen</strong>,<br />wähle eine Muskelgruppe und<br />füge Übungen zum Tag hinzu.</p>
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {plan[selectedDay].map((ex, i) => (
-                  <div key={ex.key} className="fadein" style={{
-                    display: "flex", alignItems: "center", gap: 12, background: "#fff",
-                    borderRadius: 16, padding: "14px 16px", boxShadow: "0 2px 8px rgba(0,0,0,.05)",
-                    animationDelay: `${i * .04}s`,
-                  }}>
-                    <div style={{
-                      width: 44, height: 44, borderRadius: 12, background: ex.muscleColor + "18",
-                      display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0,
-                    }}>{ex.muscleIcon}</div>
+                  <div key={ex.key} className="fadein" style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", borderRadius: 16, padding: "14px 16px", boxShadow: "0 2px 8px rgba(0,0,0,.05)" }}>
+                    <div style={{ width: 44, height: 44, borderRadius: 12, background: ex.muscleColor + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>{ex.muscleIcon}</div>
                     <div style={{ flex: 1 }}>
                       <p style={{ fontWeight: 700, fontSize: 14 }}>{ex.name}</p>
-                      <div style={{ display: "flex", gap: 6, marginTop: 4, alignItems: "center", flexWrap: "wrap" }}>
+                      <div style={{ display: "flex", gap: 6, marginTop: 4, alignItems: "center" }}>
                         <span style={{ fontSize: 11, background: ex.muscleColor + "18", color: ex.muscleColor, padding: "2px 8px", borderRadius: 6, fontWeight: 600 }}>{ex.muscleName}</span>
-                        <span style={{ fontSize: 11, color: "#c0b8ae" }}>
-                          {ex.category === "free" ? "🤸" : ex.category === "equipment" ? "🏋️" : "🏟️"} {ex.sets}
-                        </span>
+                        <span style={{ fontSize: 11, color: "#c0b8ae" }}>{ex.category === "free" ? "🤸" : ex.category === "equipment" ? "🏋️" : "🏟️"} {ex.sets}</span>
                       </div>
                     </div>
-                    <button onClick={() => removeFromPlan(selectedDay, ex.key)} style={{
-                      background: "none", border: "none", fontSize: 16, color: "#d0c8be", padding: "4px 6px",
-                    }}>✕</button>
+                    <button onClick={() => removeFromPlan(selectedDay, ex.key)} style={{ background: "none", border: "none", fontSize: 16, color: "#d0c8be", padding: "4px 6px" }}>✕</button>
                   </div>
                 ))}
               </div>
@@ -414,11 +363,7 @@ const CATS = [
                 <p style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#b0a898", fontWeight: 600, marginBottom: 12 }}>Woche im Überblick</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {DAYS.map(d => (
-                    <div key={d} onClick={() => setSelectedDay(d)} style={{
-                      display: "flex", alignItems: "center", gap: 12, padding: "10px 14px",
-                      background: "#fff", borderRadius: 12, cursor: "pointer",
-                      border: selectedDay === d ? "1.5px solid #1c1c1c" : "1.5px solid transparent",
-                    }}>
+                    <div key={d} onClick={() => setSelectedDay(d)} style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 14px", background: "#fff", borderRadius: 12, cursor: "pointer", border: selectedDay === d ? "1.5px solid #1c1c1c" : "1.5px solid transparent" }}>
                       <span style={{ fontWeight: 800, fontSize: 12, width: 22, color: plan[d].length ? "#1c1c1c" : "#d0c8be" }}>{d}</span>
                       {plan[d].length === 0
                         ? <span style={{ fontSize: 12, color: "#d0c8be" }}>Ruhetag</span>
@@ -438,4 +383,4 @@ const CATS = [
       </div>
     </div>
   );
-                         }
+                          }
